@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ILJI AX</title>
-<!-- GitHub Pages 입구(piet666/ilji_ax). 터널.py 가 https://inside-adams-lying-generation.trycloudflare.com 을 채우고 url.txt 와 같이 올린다.
+<!-- GitHub Pages 입구(piet666/ilji_ax). 터널.py 가 https://mas-marc-webmaster-saw.trycloudflare.com 을 채우고 url.txt 와 같이 올린다.
      터널이 살았는지(/ping) 보고 넘어가고, 아니면 5초마다 다시 본다. 색은 ax.css 와 같은 값 -->
 <style>
   :root { --page: #1f3a2e; --on-page: #e6ede8; --on-page-2: #a9bdb0; --accent: #f7a501; --crit: #cd4239;
@@ -34,7 +34,7 @@
   <h1><span class="lamp" aria-hidden="true"></span><span id="t">서버에 연결하는 중</span></h1>
   <p id="s" role="status">노트북이 막 켜졌다면 1~2분 걸립니다. 연결되면 바로 넘어갑니다.</p>
   <p class="meta" id="n"></p>
-  <noscript><p><a href="https://inside-adams-lying-generation.trycloudflare.com">ILJI AX 로 이동</a></p></noscript>
+  <noscript><p><a href="https://mas-marc-webmaster-saw.trycloudflare.com">ILJI AX 로 이동</a></p></noscript>
 </main>
 <script>
   const LATE_MS = 3 * 60 * 1000, t0 = Date.now();
@@ -48,7 +48,7 @@
       const r = await fetch("url.txt?t=" + Date.now(), {cache: "no-store"});
       if (r.ok) return (await r.text()).trim();
     } catch (e) {}
-    return "https://inside-adams-lying-generation.trycloudflare.com";
+    return "https://mas-marc-webmaster-saw.trycloudflare.com";
   }
 
   async function check() {
