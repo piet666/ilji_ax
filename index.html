@@ -56,7 +56,8 @@
     const url = await newestUrl();
     try {
       const r = await fetch(url + "/ping", {cache: "no-store", signal: AbortSignal.timeout(8000)});
-      if (r.ok) { location.replace(url); return; }
+      // 공유 링크: 입구/#/p/발표/... → 그 화면으로 바로(터널 주소가 바뀌어도 링크는 그대로)
+      if (r.ok) { location.replace(url + location.hash.slice(1)); return; }
     } catch (e) {}  // 옛 주소(1033)·서버 꺼짐 모두 여기로
     const s = Math.round((Date.now() - t0) / 1000);
     if (Date.now() - t0 > LATE_MS) {
